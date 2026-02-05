@@ -163,11 +163,14 @@ Follow this step-by-step guide to go from idea to deterministic outputs in a few
 ### Step 1 — Install Jig and extras
 
 ```bash
+# Fastest: install directly from GitHub
+pip install git+https://github.com/Leodotpy/jig.git
+
+# Or clone for local development
 git clone https://github.com/Leodotpy/jig.git
 cd jig
 pip install -e .
-# Optional UI extras
-pip install -e ".[gradio]"
+pip install -e ".[gradio]"  # optional UI extras
 ```
 
 ### Step 2 — Ready your runtime
