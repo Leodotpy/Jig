@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jig"
+version = "1.01"
+description = "Jig — structured output pipeline for local + multimodal LLMs (LM Studio or Ollama)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [
+    { name = "Jig Contributors" }
+]
+keywords = [
+    "lm-studio",
+    "ollama",
+    "llm",
+    "structured-output",
+    "json-schema",
+    "openai-compatible",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "colorama>=0.4.6",
+    "openai>=1.0.0",
+    "requests>=2.28.0",
+]
+
+[project.optional-dependencies]
+gradio = ["gradio>=4.0.0"]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+jig = "jig.cli:main"
+
+[project.urls]
+Repository = "https://github.com/Leodotpy/jig"
+Documentation = "https://github.com/Leodotpy/jig#readme"
+
+[tool.setuptools.packages.find]
+include = ["jig*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501"]

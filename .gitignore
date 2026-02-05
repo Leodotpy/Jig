@@ -1,0 +1,54 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+.env.local
+.env.*.local
+.python-version
+
+# Tooling caches
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.tox/
+.nox/
+coverage.xml
+.coverage
+*.cover
+htmlcov/
+
+# Distribution / packaging artefacts
+dist/
+build/
+wheels/
+pip-wheel-metadata/
+*.egg-info/
+*.egg
+*.whl
+
+# Logs / diagnostics
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*.code-workspace
+
+# OS / Misc
+.DS_Store
+Thumbs.db
+
+# Local / generated assets
+mcps/
+pairings/
+example*.py
